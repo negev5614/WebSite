@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageForMn.master.cs" Inherits="SysManage_MasterPage" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+             <a class="navbar-brand" href="#">אזור מנהל</a>
+            <div class="collapse navbar-collapse justify-content-md-center">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item active">
+                        <a class="btn btn-outline-light" href="AddProduct.aspx">הוספת מוצר<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="btn btn-outline-light" href="ProdList.aspx">רשימת מוצרים<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="btn btn-outline-light" href="UserList.aspx">רשימת משתמשים <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="btn btn-outline-light" href="OrderManagement.aspx">ניהול הזמנות<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="btn btn-outline-light" href="MailFrCust.aspx">הודעות מהמשתמש<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="btn btn-outline-danger" href="../Default.aspx">חזרה לדף האתר<span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                        <ul class="navbar-nav mr-auto">
+                <a class="nav-link" href="../Disconnect.aspx">התנתק</a>
+                            </ul>
+            </div>
+        </nav>
+    <canvas class="my-4" id="myChart" width="20" height="20"></canvas>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="/MasterPage.master.cs" Inherits="MasterPage" %>
+<!DOCTYPE html>
+<html dir="rtl">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>    
+    <form id="form1" runat="server">
+    <div>   
+     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">חנות</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="Default.aspx">לדף הבית</a>
+          </li>
+          <li class="nav-item">
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">מוצרים</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown08">
+              <a class="dropdown-item" href="Prods.aspx?Type=computer">מחשבים</a>
+              <a class="dropdown-item" href="Prods.aspx?Type=phon">פלאפונים</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <asp:Literal ID="LtlMy" runat="server"></asp:Literal>
+        </li>
+        <li class="nav-item">
+            <asp:Literal ID="LtlConn" runat="server"></asp:Literal>
+        </li>
+        <li>
+            <a href="Contact.aspx" class="btn btn-outline-primary">צור קשר</a>
+        </li>
+    </ul>
+    </nav>
+    <canvas class="my-4" id="myChart" width="20" height="20"></canvas>
+    </div>
+
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    </div>
+    </form>
+</body>
+</html>
